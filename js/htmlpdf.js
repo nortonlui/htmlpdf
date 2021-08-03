@@ -11,7 +11,7 @@ function getPDF() {
 
   var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
 
-  html2canvas($('.content')[0], { allowTaint: true }).then(function (canvas) {
+  html2canvas($('.content')[0], { allowTaint: true, foreignObjectRendering: true }).then(function (canvas) {
     canvas.getContext('2d');
     //console.log(canvas.height + '  ' + canvas.width);
 
